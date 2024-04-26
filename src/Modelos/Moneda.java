@@ -7,6 +7,7 @@ public class Moneda {
     private String name;
     private Double precio;
 
+//    constructor
     public Moneda(MonedaRecord monedarecord, String name) {
         Map<String, Double> conversionRates = monedarecord.conversion_rates();
         this.name = name;
@@ -14,6 +15,7 @@ public class Moneda {
         this.precio = conversionRates.get(this.name);
     }
 
+//    getters
     public String getName() {
         return name;
     }

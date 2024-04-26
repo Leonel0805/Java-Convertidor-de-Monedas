@@ -8,6 +8,7 @@ import java.net.http.HttpResponse;
 
 public class requestAPI {
 
+//    peticion
     public String request() throws IOException, InterruptedException {
         String url = ("https://v6.exchangerate-api.com/v6/9a7d2332b181ddc531448a5e/latest/USD");
 
@@ -18,6 +19,7 @@ public class requestAPI {
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+//        retornamos el json
         return response.body();
     }
 }

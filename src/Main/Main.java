@@ -37,7 +37,7 @@ public class Main {
             System.out.println("Elija una opción: ");
             opc = input.nextInt();
 
-
+//          OPCIONES VALIDAS
             if (opc == DOLAR_ARG) {
                 Double cantidad = pedir_cantidad();
                 Moneda moneda = monedabuscar(listamonedas_creadas, "ARS");
@@ -103,6 +103,7 @@ public class Main {
                 """, DOLAR_ARG, ARG_DOLAR, DOLAR_BRL, BRL_DOLAR, DOLAR_COL, COL_DOLAR, SALIR);
     }
 
+//    CREAMSO MONEDAS
     public static ArrayList<Moneda> crear_monedas(requestAPI api){
 
         ArrayList<Moneda> listaMonedas = new ArrayList<>();
@@ -122,7 +123,7 @@ public class Main {
 
         MonedaRecord monedaRecord = gson.fromJson(response, MonedaRecord.class);
 
-//        Creamos monedas
+//        Creamos monedas uan por una
         Moneda monedaARS = new Moneda(monedaRecord, "ARS");
         Moneda monedaBRL = new Moneda(monedaRecord, "BRL");
         Moneda monedaCOL = new Moneda(monedaRecord, "COP");
@@ -138,6 +139,7 @@ public class Main {
     public static Moneda monedabuscar(ArrayList<Moneda> listamonedas_creadas, String name) {
 
         Moneda monedaBuscada = null;
+//        hacemos un for a la lista y buscamos el mismo nombre
         for (Moneda moneda : listamonedas_creadas) {
             if (moneda.getName().equals(name)) {
                 monedaBuscada = moneda;
