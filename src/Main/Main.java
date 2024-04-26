@@ -19,7 +19,7 @@ public class Main {
     private final static int DOLAR_BRL = 3;
     private final static int BRL_DOLAR = 4;
     private final static int DOLAR_COL = 5;
-    private final static int COL_DOLAR = 6; // Corregí el valor aquí para evitar duplicados
+    private final static int COL_DOLAR = 6;
     private final static int SALIR = 0;
 
 //    Main
